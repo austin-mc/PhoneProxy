@@ -47,7 +47,7 @@ wrangler secret put AUTH_TOKEN: your twilio auth token
 wrangler secret put TWILIO_NUM: your twilio phone number
 */
 
-
+//Sends a new message to the specified number
 async function sendMessage(numTo, message) {
   const requestURL = "https://api.twilio.com/2010-04-01/Accounts/" + ACCOUNT_SID + "/Messages.json";
   
@@ -56,12 +56,8 @@ async function sendMessage(numTo, message) {
   encoded.append('From', TWILIO_NUM);
   encoded.append('Body', message);
   
-  console.log(encoded);
-  
-  //let token = Buffer.from(ACCOUNT_SID + ':' + AUTH_TOKEN).toString('base64');
- let token = btoa(ACCOUNT_SID + ':' + AUTH_TOKEN);
+  let token = btoa(ACCOUNT_SID + ':' + AUTH_TOKEN);
 
-  
   const request = {
     body: encoded,
     method: 'POST',
