@@ -22,6 +22,12 @@ async function twilioWebhookHandler(from, body) {
   } else {
     // User sends phone number at start of message followed by a semicolon
     let recip = body.substring(0, body.indexOf(';'));
+    
+    //Basic check to ensure length of phone number is valid
+    if (recip.length < 10 || recip.length > 12) {
+      return sendMessage(MY_NUM, "invalid phone number specified")
+    }
+    
     let msg = body.substring(body.indexOf(' ') + 1);
     return sendMessage(recip, msg);
   }
