@@ -1,0 +1,4 @@
+name = "phoneproxy"
+compatibility_date = "2022-08-13"
+account_id = "e4e117e43dcd195f5ab2207218d22932"
+workers_dev = true
