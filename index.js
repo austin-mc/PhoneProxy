@@ -47,12 +47,6 @@ function simpleMessage(statusCode, message) {
 }
 
 
-/*
-wrangler secret put ACCOUNT_SID: your twilio account SID
-wrangler secret put AUTH_TOKEN: your twilio auth token
-wrangler secret put TWILIO_NUM: your twilio phone number
-*/
-
 //Sends a new message to the specified number
 async function sendMessage(numTo, message) {
   const requestURL = "https://api.twilio.com/2010-04-01/Accounts/" + ACCOUNT_SID + "/Messages.json";
@@ -74,6 +68,9 @@ async function sendMessage(numTo, message) {
   }; 
   
   let result = await fetch(requestURL, request);
-  result = await result.json();
-  return new Response(JSON.stringify(result), request);
+  let responseOptions = { 
+    status: 200,
+    headers: { 'Content-Type': 'text/html'}
+   };
+  return new Response('<Response></Response>', responseOptions);
 }
