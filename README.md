@@ -10,7 +10,7 @@ To reply, type the phone number with no spaces followed by a semicolon before yo
 
 (ex: "8008675309; my message")
 
-<img src="/images/Demo.GIF" alt="App demo" height="50%" width="50%">
+<img src="/images/Demo.GIF" alt="App demo" height="35%" width="35%">
 
 
 ## Installation
