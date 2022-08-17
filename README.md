@@ -32,9 +32,9 @@ Check out the Cloudflare Workers [getting started guide](https://developers.clou
 
 ## Local development
 
-`wrangler dev index.js`
+`wrangler dev`
 
 ## Production
 
-`wrangler publish index.js`
+`wrangler publish`
 
