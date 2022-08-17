@@ -10,6 +10,9 @@ To reply, type the phone number with no spaces followed by a semicolon before yo
 
 (ex: "8008675309; my message")
 
+![App demo](/images/Demo.GIF)
+
+
 ## Installation
 
 Check out the Cloudflare Workers [getting started guide](https://developers.cloudflare.com/workers/get-started/guide/).

@@ -67,7 +67,7 @@ async function sendMessage(numTo, message) {
     },
   }; 
   
-  let result = await fetch(requestURL, request);
+  await fetch(requestURL, request);
   let responseOptions = { 
     status: 200,
     headers: { 'Content-Type': 'text/html'}

@@ -7,3 +7,4 @@ main = "index.js"
 # wrangler secret put ACCOUNT_SID: your twilio account SID
 # wrangler secret put AUTH_TOKEN: your twilio auth token
 # wrangler secret put TWILIO_NUM: your twilio phone number
+# wrangler secret put MY_NUM: your phone number for message forwarding
